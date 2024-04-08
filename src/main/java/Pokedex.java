@@ -1,5 +1,4 @@
 import java.sql.SQLException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Pokedex {
@@ -7,7 +6,6 @@ public class Pokedex {
     public static void main(String[] args) throws SQLException {
         int opcion;
         printBanner();
-        Scanner scanner = new Scanner(System.in);
         boolean salir = false;
         while (!salir) {
             printMenu();
@@ -55,7 +53,7 @@ public class Pokedex {
 
     public static int selectedOption() {
         Scanner sc = new Scanner(System.in);
-        int opcion = -1;
+        int opcion;
         while (true) {
             try{
                 opcion = Integer.parseInt(sc.next());

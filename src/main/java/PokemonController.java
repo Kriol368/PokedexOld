@@ -14,7 +14,7 @@ public class PokemonController {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce el numero de la pokedex del pokemon a buscar: ");
         int id = Integer.parseInt(scanner.nextLine());
-        Pokemon p = pokemonRepository.findById(1);
+        Pokemon p = pokemonRepository.findById(id);
         System.out.println(p);
     }
 
