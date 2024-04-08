@@ -30,9 +30,11 @@ public class Pokedex {
 
     public static void printMenu() {
         //System.out.println("0 Exit | " + "1 Print | " + "2 Add | " + "3 Update | " + "4 Delete | " + "5 Search");
-        System.out.println(AnsiColor.BLUE.getCode());
+        System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");
+        System.out.println(AnsiColor.BLUE.getCode());
         System.out.println("0 Exit | 1 View all | 2 View by number | 3 Add pokemon");
+        System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");
         System.out.println(AnsiColor.RESET.getCode());
     }
