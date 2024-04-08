@@ -1,4 +1,5 @@
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ public class PokemonController {
         System.out.println("------------------------------------------------------------------------------------------");
         List<Pokemon> pokemons = pokemonRepository.findAll();
         System.out.println(AnsiColor.BLUE.getCode());
-        System.out.println(pokemons);
+        pokemons.forEach(System.out::println);
         System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");
     }
