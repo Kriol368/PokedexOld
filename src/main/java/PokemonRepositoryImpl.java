@@ -58,7 +58,7 @@ public class PokemonRepositoryImpl implements IRepository<Pokemon> {
 
     public void save(Pokemon pokemon) throws SQLException {
         ResultSet rs;
-        PreparedStatement st = null;
+        PreparedStatement st;
         String query = "INSERT INTO pokemon VALUES (?, ?, ?, ?)";
         st = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         st.setInt(1, pokemon.getId());

@@ -17,26 +17,13 @@ public class Pokedex {
                     salir = true;
                     break;
                 case 1:
-                    List<Pokemon> pokemons = pokemonRepository.findAll();
-                    System.out.println(pokemons);
+                    PokemonController.viewAll(pokemonRepository);
                     break;
                 case 2:
-                    System.out.println("Introduce el numero de la pokedex del pokemon a buscar: ");
-                    int id = Integer.parseInt(scanner.nextLine());
-                    Pokemon p = pokemonRepository.findById(1);
-                    System.out.println(p);
+                    PokemonController.viewByNumber(pokemonRepository);
                     break;
                 case 3:
-                    System.out.println("Introduce the pokedex number: ");
-                    int newid = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Introduce the name: ");
-                    String newname = scanner.nextLine();
-                    System.out.println("Introduce its first type: ");
-                    String newtype1 = scanner.nextLine();
-                    System.out.println("Introduce its second type: ");
-                    String newtype2 = scanner.nextLine();
-                    Pokemon newp = new Pokemon(newid,newname,newtype1,newtype2);
-                    pokemonRepository.save(newp);
+                    PokemonController.addPokemon(pokemonRepository);
                     break;
             }
         }
