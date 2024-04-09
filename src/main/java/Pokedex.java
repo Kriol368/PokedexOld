@@ -23,6 +23,9 @@ public class Pokedex {
                 case 3:
                     PokemonController.addPokemon(pokemonRepository);
                     break;
+                case 4:
+                    PokemonController.removePokemon(pokemonRepository);
+                    break;
             }
         }
     }
@@ -33,7 +36,7 @@ public class Pokedex {
         System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");
         System.out.println(AnsiColor.BLUE.getCode());
-        System.out.println("0 Exit | 1 View all | 2 View by number | 3 Add pokemon");
+        System.out.println("0 Exit | 1 View all | 2 View by number | 3 Add Pokemon | 4 Remove Pokemon");
         System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");
         System.out.println(AnsiColor.RESET.getCode());
@@ -59,7 +62,7 @@ public class Pokedex {
         while (true) {
             try{
                 opcion = Integer.parseInt(sc.next());
-                if ( opcion <= 3 ) {
+                if ( opcion <= 4 ) {
                     break;
                 } else {
                     System.out.println(AnsiColor.RED.getCode());

@@ -47,4 +47,19 @@ public class PokemonController {
         System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");
     }
+
+
+    public static void removePokemon (PokemonRepositoryImpl pokemonRepository) throws SQLException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(AnsiColor.RED.getCode());
+        System.out.println("------------------------------------------------------------------------------------------");
+        System.out.println(AnsiColor.BLUE.getCode());
+        System.out.println("Introduce the pokedex number of the pokemon to remove: ");
+        int id = Integer.parseInt(scanner.nextLine());
+        Pokemon p = pokemonRepository.findById(id);
+        pokemonRepository.delete(p);
+        System.out.println(p.getName() + " successfully removed");
+        System.out.println(AnsiColor.RED.getCode());
+        System.out.println("------------------------------------------------------------------------------------------");
+    }
 }
