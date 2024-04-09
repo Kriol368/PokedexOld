@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class PokemonController {
 
 
-    public static void viewAll(PokemonRepositoryImpl pokemonRepository) throws SQLException{
+    public static void viewAll(PokemonRepositoryImpl pokemonRepository) throws SQLException {
         System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");
         List<Pokemon> pokemons = pokemonRepository.findAll();
@@ -16,7 +16,7 @@ public class PokemonController {
         System.out.println("------------------------------------------------------------------------------------------");
     }
 
-    public static void viewByNumber(PokemonRepositoryImpl pokemonRepository) throws SQLException{
+    public static void viewByNumber(PokemonRepositoryImpl pokemonRepository) throws SQLException {
         Scanner scanner = new Scanner(System.in);
         System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");
@@ -42,14 +42,14 @@ public class PokemonController {
         String newtype1 = scanner.nextLine();
         System.out.println("Introduce its second type: ");
         String newtype2 = scanner.nextLine();
-        Pokemon newp = new Pokemon(newid,newname,newtype1,newtype2);
+        Pokemon newp = new Pokemon(newid, newname, newtype1, newtype2);
         pokemonRepository.save(newp);
         System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");
     }
 
 
-    public static void removePokemon (PokemonRepositoryImpl pokemonRepository) throws SQLException {
+    public static void removePokemon(PokemonRepositoryImpl pokemonRepository) throws SQLException {
         Scanner scanner = new Scanner(System.in);
         System.out.println(AnsiColor.RED.getCode());
         System.out.println("------------------------------------------------------------------------------------------");

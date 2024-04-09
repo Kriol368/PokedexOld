@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Pokedex {
     private static final PokemonRepositoryImpl pokemonRepository = new PokemonRepositoryImpl();
+
     public static void main(String[] args) throws SQLException {
         int opcion;
         printBanner();
@@ -60,16 +61,16 @@ public class Pokedex {
         Scanner sc = new Scanner(System.in);
         int opcion;
         while (true) {
-            try{
+            try {
                 opcion = Integer.parseInt(sc.next());
-                if ( opcion <= 4 ) {
+                if (opcion <= 4) {
                     break;
                 } else {
                     System.out.println(AnsiColor.RED.getCode());
                     System.out.println("Incorrect option");
                     System.out.println(AnsiColor.RESET.getCode());
                 }
-            }catch (IllegalArgumentException iae){
+            } catch (IllegalArgumentException iae) {
                 System.out.println(AnsiColor.RED.getCode());
                 System.out.println("Incorrect option");
                 System.out.println(AnsiColor.RESET.getCode());

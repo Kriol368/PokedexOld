@@ -44,7 +44,7 @@ public class Pokemon {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.id + " - " + this.name + "\n\t" + this.type1 + " " + this.type2;
     }
 }
